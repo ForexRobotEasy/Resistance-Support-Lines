@@ -1,0 +1,97 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                 Resistance Support Lines         |
+//|                        Developer: Forex Robot Easy Team          |
+//|                        Website: forexroboteasy.com               |
+//+------------------------------------------------------------------+
+
+#property copyright 'Forex Robot Easy Team'
+#property link      'forexroboteasy.com'
+
+//+------------------------------------------------------------------+
+//| Expert initialization function                                   |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+    // Add initialization code here
+}
+
+//+------------------------------------------------------------------+
+//| Expert deinitialization function                                 |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+    // Add deinitialization code here
+}
+
+//+------------------------------------------------------------------+
+//| Expert start function                                            |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+    // Add trading logic here
+}
+
+//+------------------------------------------------------------------+
+//| Custom function to calculate resistance and support levels       |
+//+------------------------------------------------------------------+
+void CalculateResistanceSupport()
+{
+    int fractalCandles = 5; // Number of candles to build a fractal
+
+    // Calculate the highs and lows over a specified period
+    double[] highs;
+    double[] lows;
+    ArrayResize(highs, fractalCandles);
+    ArrayResize(lows, fractalCandles);
+    
+    for (int i = 0; i < fractalCandles; i++)
+    {
+        highs[i] = High[i];
+        lows[i] = Low[i];
+    }
+
+    // Calculate support and resistance levels based on the highs and lows
+
+    // Add code to calculate support and resistance levels here
+    
+    // Print the calculated levels
+    Print('Support Levels:');
+    for (int i = 0; i < supportLevels.Length(); i++)
+    {
+        Print(supportLevels[i]);
+    }
+
+    Print('Resistance Levels:');
+    for (int i = 0; i < resistanceLevels.Length(); i++)
+    {
+        Print(resistanceLevels[i]);
+    }
+}
+
+//+------------------------------------------------------------------+
+//| Custom function to handle errors and validation                  |
+//+------------------------------------------------------------------+
+bool HandleErrorsAndValidation()
+{
+    // Add error handling and validation code here
+
+    // Return true if validation is successful, false otherwise
+    return true;
+}
+
+//+------------------------------------------------------------------+
+//| Custom function to test the code                                 |
+//+------------------------------------------------------------------+
+void TestCode()
+{
+    // Add code to test the functionality here
+}
+
+//+------------------------------------------------------------------+
+//| Custom function to provide documentation and instructions        |
+//+------------------------------------------------------------------+
+void ProvideDocumentation()
+{
+    // Add documentation and instructions here
+}
